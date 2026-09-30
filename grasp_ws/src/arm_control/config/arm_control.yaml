@@ -1,0 +1,6 @@
+arm_control:
+  ros__parameters:
+    base_frame: base_link
+    tool_frame: tool0
+    default_velocity_scale: 0.2
+    default_acceleration_scale: 0.2

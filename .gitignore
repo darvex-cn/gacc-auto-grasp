@@ -1,0 +1,68 @@
+# ROS 2 / colcon build products
+/grasp_ws/build/
+/grasp_ws/install/
+/grasp_ws/log/
+
+# Python caches, packaging, and test artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual environments and local environment variables
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Datasets, model checkpoints, and exported inference models
+/datasets/
+/models/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.engine
+*.safetensors
+
+# Training outputs and automatically downloaded weights
+/training/yolo/runs/
+/training/yolo/weights/
+
+# Machine-specific calibration output
+/grasp_ws/src/hand_eye_calibration/outcome/
+
+# Native/CUDA build products
+*.o
+*.obj
+*.so
+*.a
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*.orig
+*.rej
+*~
+
+# IDE and operating-system metadata
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

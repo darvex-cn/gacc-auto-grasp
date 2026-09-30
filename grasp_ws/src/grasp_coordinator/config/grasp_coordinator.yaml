@@ -1,0 +1,6 @@
+grasp_coordinator:
+  ros__parameters:
+    detect_grasp_service: /detect_grasp
+    move_to_pose_action: /move_to_pose
+    approach_distance: 0.10
+    retreat_distance: 0.10

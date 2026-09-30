@@ -1,0 +1,4 @@
+system:
+  base_frame: base_link
+  tool_frame: tool0
+  camera_frame: camera_color_optical_frame

@@ -1,0 +1,28 @@
+conversion:
+  # 配置相对于项目根目录的目录即可
+  source_directory: datasets/motor_parts
+  output_directory: datasets/motor_parts_yolo
+  # 列表顺序决定 YOLO 类别编号：type1=0，type2=1
+  class_names:
+    - motor_part_type1
+    - motor_part_type2
+  train_ratio: 0.9
+  val_ratio: 0.1
+  test_ratio: 0
+  random_seed: 42
+  overwrite: true
+
+training:
+  # 相对路径均以项目根目录 gacc_grasp 为基准，也可以填写绝对路径
+  model_path: models/yolo/pretrained/yolo26s-seg.pt
+  data_yaml: datasets/motor_parts_yolo/data.yaml
+  epochs: 200
+  image_size: 640
+  batch_size: 16
+  device: cuda:0
+  workers: 8
+  patience: 40
+  cache: false
+  resume: false
+  project_directory: training/yolo/runs/yolo
+  run_name: motor_parts_yolo26s_seg

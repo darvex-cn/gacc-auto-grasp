@@ -1,0 +1,6 @@
+---
+bool success
+string message
+geometry_msgs/PoseStamped base_to_gripper_pose
+float32 score
+float32 width

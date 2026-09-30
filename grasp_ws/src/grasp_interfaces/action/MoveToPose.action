@@ -1,0 +1,9 @@
+geometry_msgs/PoseStamped target_pose
+float32 velocity_scale
+float32 acceleration_scale
+---
+bool success
+string message
+---
+string state
+float32 progress

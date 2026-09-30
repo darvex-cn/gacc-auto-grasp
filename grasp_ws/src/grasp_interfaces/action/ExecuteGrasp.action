@@ -1,0 +1,11 @@
+bool use_detected_pose
+geometry_msgs/PoseStamped target_pose
+float32 approach_distance
+float32 retreat_distance
+---
+bool success
+string message
+geometry_msgs/PoseStamped executed_pose
+---
+string stage
+float32 progress

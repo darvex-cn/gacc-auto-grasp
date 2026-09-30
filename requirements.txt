@@ -1,0 +1,28 @@
+# 当前工程使用 Python 3.10 和 CUDA 12.8。
+# 如果主机 CUDA 环境不同，请先安装匹配的 PyTorch，并调整下面两个 torch 包版本。
+--extra-index-url https://download.pytorch.org/whl/cu128
+
+# GraspNet 推理以及 YOLO 训练/推理依赖。
+numpy==2.2.6
+scipy==1.15.3
+torch==2.8.0+cu128
+torchvision==0.23.0+cu128
+tensorboard==2.21.0
+open3d==0.19.0
+Pillow==12.3.0
+tqdm==4.70.0
+PyYAML==6.0.3
+opencv-python==5.0.0.93
+ultralytics==8.4.143
+
+# 工程内的本地 Python 包。
+-e ./third_party/graspnetAPI
+-e ./python_libs/graspnet_adapter
+
+# rclpy、cv_bridge 和消息类型等 ROS 2 依赖由 rosdep/apt 安装，不通过 pip 安装：
+#   rosdep install --from-paths grasp_ws/src --ignore-src -r -y
+#
+# GraspNet 的 CUDA 扩展必须在 PyTorch 安装后单独编译，以匹配当前使用的
+# Python、PyTorch 和 CUDA 环境：
+#   pip install --no-build-isolation -v ./third_party/graspnet-baseline/pointnet2
+#   pip install --no-build-isolation -v ./third_party/graspnet-baseline/knn
