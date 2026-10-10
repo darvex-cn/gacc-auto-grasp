@@ -42,8 +42,6 @@ def _flatten_config(mapping: dict, node_name: str, prefix: str = '') -> dict:
 @param path_params: 需要相对于项目根目录解析的参数名集合
 @return: 展开后的参数字典
 '''
-
-
 def load_config(
     config_path: str | Path,
     node_name: str,

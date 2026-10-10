@@ -1,6 +1,28 @@
-# GACC Auto Grasp
+<div align="center">
 
-GACC Auto Grasp 是一个基于 ROS 2 Humble 的视觉抓取工程，包含 YOLO 实例分割、GraspNet 抓取位姿估计和 eye-in-hand 手眼标定。
+<h1>GACC Auto Grasp</h1>
+
+<p>
+基于 ROS 2 Humble 的视觉抓取工程<br>
+集成 YOLO 实例分割、GraspNet 抓取位姿估计与 Eye-in-Hand 手眼标定<br>
+将抓取位姿从相机坐标系转换到机器人基座坐标系
+</p>
+
+<p>
+<a href="#1-下载工程与初始化子模块">下载与初始化</a> ·
+<a href="#2-新建-conda-环境部署依赖与编译工程">环境部署与编译</a> ·
+<a href="#3-运行与使用">运行与使用</a>
+</p>
+
+<p>
+<img src="https://img.shields.io/badge/Ubuntu-22.04-E95420?logo=ubuntu&logoColor=white" alt="Ubuntu 22.04">
+<img src="https://img.shields.io/badge/ROS_2-Humble-22314E?logo=ros&logoColor=white" alt="ROS 2 Humble">
+<img src="https://img.shields.io/badge/Python-3.10-3776AB?logo=python&logoColor=white" alt="Python 3.10">
+<a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License"></a>
+<a href="https://github.com/darvex-cn/gacc-auto-grasp/stargazers"><img src="https://img.shields.io/github/stars/darvex-cn/gacc-auto-grasp?style=flat" alt="GitHub Stars"></a>
+</p>
+
+</div>
 
 当前感知流程为：相机发布对齐后的 RGB-D 数据，YOLO 持续分割目标；调用 `/detect_grasp` 服务时，GraspNet 根据最新分割结果生成抓取候选，并结合手眼标定结果和机械臂末端位姿，将最佳抓取位姿转换到机器人基座坐标系。
 
